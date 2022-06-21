@@ -1,0 +1,19 @@
+package aplicacao;
+
+import classes.Cliente;
+import java.util.Scanner;
+
+public class AppCliente {
+
+	public static void main(String[] args) {
+		
+		Cliente cli = new Cliente(); 
+		cli.nome = "Pedro";
+		cli.email = "pedro@terra.com.br";
+		cli.cpf = "12345678998";
+		cli.cadastrar(cli);
+		System.out.println("---------------------- Clientes Cadastrados -------------------------------");
+		cli.listar();
+	}
+
+}

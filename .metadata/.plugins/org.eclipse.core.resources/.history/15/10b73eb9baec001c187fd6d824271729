@@ -1,0 +1,17 @@
+package aplicacao;
+
+import classes.PrjCliente;
+import classes.PrjEndereco;
+import classes.PrjUsuario;
+
+public class CadastroCliente {
+
+	public static void main(String[] args) {
+		
+		PrjUsuario usuario = new PrjUsuario();
+		PrjEndereco endereco = new PrjEndereco();
+		PrjCliente cliente = new PrjCliente();
+
+	}
+
+}

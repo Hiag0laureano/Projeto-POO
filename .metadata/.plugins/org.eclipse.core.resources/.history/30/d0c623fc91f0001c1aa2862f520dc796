@@ -1,0 +1,103 @@
+package aplicacao;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import java.awt.Window.Type;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextPane;
+
+public class FormCliente extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FormCliente frame = new FormCliente();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public FormCliente() {
+		setTitle("Gerenciar Clientes");
+		setBackground(new Color(102, 51, 102));
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 891, 622);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(192, 192, 192));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblIdCliente = new JLabel("ID do Cliente:");
+		lblIdCliente.setFont(new Font("Verdana", Font.PLAIN, 11));
+		lblIdCliente.setBounds(20, 11, 92, 14);
+		contentPane.add(lblIdCliente);
+		
+		JTextPane txtIdCliente = new JTextPane();
+		txtIdCliente.setBounds(20, 26, 82, 20);
+		contentPane.add(txtIdCliente);
+		
+		JLabel lblNomeCliente = new JLabel("Nome do Cliente:");
+		lblNomeCliente.setFont(new Font("Verdana", Font.PLAIN, 11));
+		lblNomeCliente.setBounds(128, 11, 119, 14);
+		contentPane.add(lblNomeCliente);
+		
+		JTextPane txtNomeCliente = new JTextPane();
+		txtNomeCliente.setBounds(128, 26, 332, 20);
+		contentPane.add(txtNomeCliente);
+		
+		JLabel lblEmail = new JLabel("E-mail:");
+		lblEmail.setFont(new Font("Verdana", Font.PLAIN, 11));
+		lblEmail.setBounds(20, 67, 119, 14);
+		contentPane.add(lblEmail);
+		
+		JTextPane txtEmailCliente = new JTextPane();
+		txtEmailCliente.setBounds(20, 81, 440, 20);
+		contentPane.add(txtEmailCliente);
+		
+		JLabel lblIdUsuario = new JLabel("ID do Usuario:");
+		lblIdUsuario.setFont(new Font("Verdana", Font.PLAIN, 11));
+		lblIdUsuario.setBounds(20, 131, 92, 14);
+		contentPane.add(lblIdUsuario);
+		
+		JTextPane txtIdUsuario = new JTextPane();
+		txtIdUsuario.setBounds(20, 146, 82, 20);
+		contentPane.add(txtIdUsuario);
+		
+		JLabel lblNomeUsuario = new JLabel("Nome do Usuario:");
+		lblNomeUsuario.setFont(new Font("Verdana", Font.PLAIN, 11));
+		lblNomeUsuario.setBounds(128, 131, 119, 14);
+		contentPane.add(lblNomeUsuario);
+		
+		JTextPane txtUsuario = new JTextPane();
+		txtUsuario.setBounds(128, 146, 204, 20);
+		contentPane.add(txtUsuario);
+		
+		JLabel lblSenhaUsuario = new JLabel("Senha:");
+		lblSenhaUsuario.setFont(new Font("Verdana", Font.PLAIN, 11));
+		lblSenhaUsuario.setBounds(342, 131, 119, 14);
+		contentPane.add(lblSenhaUsuario);
+		
+		JTextPane txtEmailCliente_1 = new JTextPane();
+		txtEmailCliente_1.setBounds(342, 146, 118, 20);
+		contentPane.add(txtEmailCliente_1);
+	}
+}

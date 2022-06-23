@@ -1,0 +1,124 @@
+package aplicacao;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import javax.swing.border.BevelBorder;
+import javax.swing.SwingConstants;
+import javax.swing.JTextField;
+
+public class FormCorrente extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtBanco;
+	private JTextField txtAgencia;
+	private JTextField txtConta;
+	private JTextField txtTitular;
+	private JTextField txtSaldo;
+	private JTextField txtLimite;
+
+	/**
+	 * Launch the application.
+	 */
+	
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public FormCorrente() {
+		setTitle("Conta Corrente");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 469, 438);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JPanel pnlDadosConta = new JPanel();
+		pnlDadosConta.setBackground(Color.WHITE);
+		pnlDadosConta.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		pnlDadosConta.setBounds(0, 11, 433, 194);
+		contentPane.add(pnlDadosConta);
+		pnlDadosConta.setLayout(null);
+		
+		JLabel lblDadosConta = new JLabel("Dados da Conta");
+		lblDadosConta.setFont(new Font("Century Gothic", Font.PLAIN, 11));
+		lblDadosConta.setBounds(10, 11, 106, 14);
+		pnlDadosConta.add(lblDadosConta);
+		
+		JLabel lblNumeroBanco = new JLabel("Numero do Banco:");
+		lblNumeroBanco.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNumeroBanco.setBounds(10, 44, 106, 14);
+		pnlDadosConta.add(lblNumeroBanco);
+		
+		JLabel lblNumeroAgencia = new JLabel("Numero da Ag\u00EAncia:");
+		lblNumeroAgencia.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNumeroAgencia.setBounds(10, 102, 106, 14);
+		pnlDadosConta.add(lblNumeroAgencia);
+		
+		JLabel lblNumeroConta = new JLabel("Numero da Conta:");
+		lblNumeroConta.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblNumeroConta.setBounds(10, 160, 106, 14);
+		pnlDadosConta.add(lblNumeroConta);
+		
+		JLabel lblTitulart = new JLabel("Titular:");
+		lblTitulart.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblTitulart.setBounds(213, 44, 40, 14);
+		pnlDadosConta.add(lblTitulart);
+		
+		JLabel lblSaldo = new JLabel("Saldo:");
+		lblSaldo.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblSaldo.setBounds(213, 102, 40, 14);
+		pnlDadosConta.add(lblSaldo);
+		
+		JLabel lblLimite = new JLabel("Limite:");
+		lblLimite.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblLimite.setBounds(213, 160, 40, 14);
+		pnlDadosConta.add(lblLimite);
+		
+		txtBanco = new JTextField();
+		txtBanco.setBounds(117, 41, 86, 20);
+		pnlDadosConta.add(txtBanco);
+		txtBanco.setColumns(10);
+		
+		txtAgencia = new JTextField();
+		txtAgencia.setColumns(10);
+		txtAgencia.setBounds(117, 99, 86, 20);
+		pnlDadosConta.add(txtAgencia);
+		
+		txtConta = new JTextField();
+		txtConta.setColumns(10);
+		txtConta.setBounds(117, 157, 86, 20);
+		pnlDadosConta.add(txtConta);
+		
+		txtTitular = new JTextField();
+		txtTitular.setColumns(10);
+		txtTitular.setBounds(255, 41, 168, 20);
+		pnlDadosConta.add(txtTitular);
+		
+		txtSaldo = new JTextField();
+		txtSaldo.setColumns(10);
+		txtSaldo.setBounds(255, 99, 67, 20);
+		pnlDadosConta.add(txtSaldo);
+		
+		txtLimite = new JTextField();
+		txtLimite.setColumns(10);
+		txtLimite.setBounds(255, 157, 67, 20);
+		pnlDadosConta.add(txtLimite);
+		
+		JButton btnAbrirConta = new JButton("Abrir Conta");
+		btnAbrirConta.setBounds(334, 98, 89, 76);
+		pnlDadosConta.add(btnAbrirConta);
+	}
+}

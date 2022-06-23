@@ -1,0 +1,13 @@
+package classes;
+
+public class ContaPoupanca extends ContaBancaria{
+	public String aniversario;
+	
+	//Criar métodos de acesso:get set
+	public void setNumeroBanco(int numeroBanco) {
+		super.numeroBanco = numeroBanco;
+	}
+	public void setNumeroAgencia(int numeroAgencia) {
+		super.numeroAgencia = numeroAgencia;
+	}
+}

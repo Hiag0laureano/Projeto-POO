@@ -1,0 +1,46 @@
+package classes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TransacoesPoupanca implements OperacoesPoupanca {
+	
+	List<ContaPoupanca> lstPoupanca = new ArrayList<ContaPoupanca>();
+
+	@Override
+	public String abrirConta(ContaPoupanca conta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String depositar(double valor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sacar(double valor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String saldo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String transferencia(double valor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String calcularRendimento(double percentual) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

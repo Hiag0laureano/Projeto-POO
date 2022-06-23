@@ -1,0 +1,54 @@
+package aplicacao;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+
+public class FormCorrente extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public FormCorrente() {
+		setTitle("Conta Corrente");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 469, 438);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNumeroBanco = new JLabel("N\u00FAmero do Banco:");
+		lblNumeroBanco.setBounds(10, 30, 46, 14);
+		contentPane.add(lblNumeroBanco);
+		
+		JLabel lblAgencia = new JLabel("N\u00FAmero da Agencia:");
+		lblAgencia.setBounds(10, 84, 46, 14);
+		contentPane.add(lblAgencia);
+		
+		JLabel lblNewLabel_2 = new JLabel("New label");
+		lblNewLabel_2.setBounds(10, 136, 46, 14);
+		contentPane.add(lblNewLabel_2);
+		
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setBounds(235, 30, 46, 14);
+		contentPane.add(lblNewLabel_3);
+		
+		JLabel lblNewLabel_4 = new JLabel("New label");
+		lblNewLabel_4.setBounds(235, 136, 46, 14);
+		contentPane.add(lblNewLabel_4);
+	}
+}

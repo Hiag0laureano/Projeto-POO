@@ -1,0 +1,58 @@
+package aplicacao;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+
+public class FormCorrente extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public FormCorrente() {
+		setTitle("Conta Corrente");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 469, 438);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNumeroBanco = new JLabel("N\u00FAmero do Banco:");
+		lblNumeroBanco.setBounds(10, 30, 99, 14);
+		contentPane.add(lblNumeroBanco);
+		
+		JLabel lblAgencia = new JLabel("N\u00FAmero da Agencia:");
+		lblAgencia.setBounds(10, 84, 99, 14);
+		contentPane.add(lblAgencia);
+		
+		JLabel lblNumeroConta = new JLabel("N\u00FAmero da Conta:");
+		lblNumeroConta.setBounds(10, 136, 99, 14);
+		contentPane.add(lblNumeroConta);
+		
+		JLabel lblTItular = new JLabel("Titular da Conta:");
+		lblTItular.setBounds(235, 30, 112, 14);
+		contentPane.add(lblTItular);
+		
+		JLabel lblSaldo = new JLabel("Saldo:");
+		lblSaldo.setBounds(235, 136, 46, 14);
+		contentPane.add(lblSaldo);
+		
+		JLabel lblAniversario = new JLabel("Aniversario da Conta:");
+		lblAniversario.setBounds(235, 84, 112, 14);
+		contentPane.add(lblAniversario);
+	}
+}

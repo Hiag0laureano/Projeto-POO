@@ -1,0 +1,43 @@
+package classes;
+
+public class TransacoesCorrente implements OperacoesCorrente {
+
+	List<ContaCorrente> lstCorrente = new ArrayList<ContaCorrente>();
+	
+	@Override
+	public String abrirConta(ContaCorrente conta) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String depositar(double valor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String sacar(double valor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String saldo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String transferencia(double valor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String taxaAdministracao(double percentual) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,103 @@
+package aplicacao;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextPane;
+import javax.swing.JButton;
+import java.awt.Font;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+
+public class FormCorrente extends JFrame {
+
+	private JPanel contentPane;
+	private JTextPane txtSaldo;
+
+	/**
+	 * Launch the application.
+	 */
+	
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public FormCorrente() {
+		setTitle("Conta Corrente");
+		setResizable(false);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 469, 438);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNumeroBanco = new JLabel("N\u00FAmero do Banco:");
+		lblNumeroBanco.setBounds(10, 30, 99, 14);
+		contentPane.add(lblNumeroBanco);
+		
+		JLabel lblAgencia = new JLabel("N\u00FAmero da Agencia:");
+		lblAgencia.setBounds(10, 84, 99, 14);
+		contentPane.add(lblAgencia);
+		
+		JLabel lblNumeroConta = new JLabel("N\u00FAmero da Conta:");
+		lblNumeroConta.setBounds(10, 136, 99, 14);
+		contentPane.add(lblNumeroConta);
+		
+		JLabel lblTItular = new JLabel("Titular da Conta:");
+		lblTItular.setBounds(169, 30, 112, 14);
+		contentPane.add(lblTItular);
+		
+		JLabel lblSaldo = new JLabel("Saldo:");
+		lblSaldo.setBounds(169, 136, 112, 14);
+		contentPane.add(lblSaldo);
+		
+		JLabel lblAniversario = new JLabel("Aniversario da Conta:");
+		lblAniversario.setBounds(169, 84, 112, 14);
+		contentPane.add(lblAniversario);
+		
+		JTextPane txtBanco = new JTextPane();
+		txtBanco.setBounds(10, 44, 110, 20);
+		contentPane.add(txtBanco);
+		
+		JTextPane txtAgencia = new JTextPane();
+		txtAgencia.setBounds(10, 97, 110, 20);
+		contentPane.add(txtAgencia);
+		
+		JTextPane txtConta = new JTextPane();
+		txtConta.setBounds(10, 149, 110, 20);
+		contentPane.add(txtConta);
+		
+		JTextPane txtTitular = new JTextPane();
+		txtTitular.setBounds(169, 44, 274, 20);
+		contentPane.add(txtTitular);
+		
+		JTextPane txtAniversario = new JTextPane();
+		txtAniversario.setBounds(169, 97, 110, 20);
+		contentPane.add(txtAniversario);
+		
+		txtSaldo = new JTextPane();
+		txtSaldo.setBounds(169, 149, 110, 20);
+		contentPane.add(txtSaldo);
+		
+		JButton btnAbrirConta = new JButton("Abrir Conta");
+		btnAbrirConta.setFont(new Font("Verdana", Font.PLAIN, 14));
+		btnAbrirConta.setBounds(291, 97, 152, 72);
+		contentPane.add(btnAbrirConta);
+		
+		JLabel lblTransacoes = new JLabel("Transa\u00E7\u00F5es:");
+		lblTransacoes.setBackground(Color.LIGHT_GRAY);
+		lblTransacoes.setBounds(25, 172, 59, 14);
+		contentPane.add(lblTransacoes);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(Color.GRAY));
+		panel.setBounds(20, 180, 420, 82);
+		contentPane.add(panel);
+	}
+}

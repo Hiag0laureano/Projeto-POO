@@ -134,15 +134,7 @@ public class FormCorrente extends JFrame {
 		btnAbrirConta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				cc.setNumeroBanco(Integer.parseInt(txtBanco.getText()));
-				cc.setNumeroAgencia(Integer.parseInt(txtAgencia.getText()));
-				cc.setNumeroConta(Integer.parseInt(txtConta.getText()));
-				cc.setTitular(txtTitular.getText());
-				cc.setSaldo(Double.parseDouble(txtSaldo.getText()));
-				cc.setLimite(Double.parseDouble(txtLimite.getText()));
 				
-				txtSaida.setText(tc.abrirConta(cc));
-			
 			}
 		});
 		btnAbrirConta.setBounds(334, 86, 89, 46);

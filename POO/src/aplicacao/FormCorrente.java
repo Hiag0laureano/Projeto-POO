@@ -9,6 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -77,7 +78,7 @@ public class FormCorrente extends JFrame {
 		
 		JLabel lblNumeroAgencia = new JLabel("Numero da Ag\u00EAncia:");
 		lblNumeroAgencia.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblNumeroAgencia.setBounds(10, 90, 106, 14);
+		lblNumeroAgencia.setBounds(0, 93, 116, 14);
 		pnlDadosConta.add(lblNumeroAgencia);
 		
 		JLabel lblNumeroConta = new JLabel("Numero da Conta:");
@@ -142,6 +143,14 @@ public class FormCorrente extends JFrame {
 				cc.setLimite(Double.parseDouble(txtLimite.getText()));
 				
 				txtSaida.setText(tc.abrirConta(cc));
+				
+				txtBanco.setEnabled(false);
+				txtAgencia.setEnabled(false);
+				txtConta.setEnabled(false);
+				txtTitular.setEnabled(false);
+				txtSaldo.setEnabled(false);
+				txtLimite.setEnabled(false);
+				btnAbrirConta.setEnabled(false);
 			
 			}
 		});
@@ -154,31 +163,62 @@ public class FormCorrente extends JFrame {
 		panel.setLayout(null);
 		
 		JButton btnSacar = new JButton("Sacar");
+		btnSacar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(validarValorTransacao()) {
+					txtSaida.append("\n"+tc.sacar(Double.parseDouble(txtValorTransacao.getText())));
+				}
+				
+			}
+		});
 		btnSacar.setIcon(new ImageIcon(FormCorrente.class.getResource("/icons/Website \u00BB Download.png")));
-		btnSacar.setBounds(142, 9, 123, 35);
+		btnSacar.setBounds(129, 9, 134, 35);
 		panel.add(btnSacar);
 		
 		JButton btnDepositar = new JButton("Depositar");
+		btnDepositar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(validarValorTransacao()) {
+					txtSaida.append("\n"+tc.depositar(Double.parseDouble(txtValorTransacao.getText())));
+				}
+			}
+		});
 		btnDepositar.setIcon(new ImageIcon(FormCorrente.class.getResource("/icons/Chest of Drawers \u00BB Open \u00BB Files.png")));
-		btnDepositar.setBounds(142, 55, 123, 35);
+		btnDepositar.setBounds(129, 55, 134, 35);
 		panel.add(btnDepositar);
 		
 		JButton btnTransferecnia = new JButton("Transferencia");
+		btnTransferecnia.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(validarValorTransacao()){
+					txtSaida.append("\n"+tc.transferencia(Double.parseDouble(txtValorTransacao.getText())));
+				}
+			}
+		});
 		btnTransferecnia.setIcon(new ImageIcon(FormCorrente.class.getResource("/icons/Sign Post.png")));
-		btnTransferecnia.setBounds(288, 11, 123, 35);
+		btnTransferecnia.setBounds(273, 9, 150, 35);
 		panel.add(btnTransferecnia);
 		
 		JButton btnSaldo = new JButton("Saldo");
+		btnSaldo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				txtSaida.append("\n"+tc.saldo());
+				
+			}
+		});
 		btnSaldo.setIcon(new ImageIcon(FormCorrente.class.getResource("/icons/Hard Disk \u00BB Installation.png")));
-		btnSaldo.setBounds(288, 55, 123, 35);
+		btnSaldo.setBounds(273, 55, 150, 35);
 		panel.add(btnSaldo);
 		
 		JLabel lblValorTransacao = new JLabel("Valor Transa\u00E7\u00E3o:");
-		lblValorTransacao.setBounds(10, 30, 122, 14);
+		lblValorTransacao.setBounds(10, 19, 122, 14);
 		panel.add(lblValorTransacao);
 		
 		txtValorTransacao = new JTextField();
-		txtValorTransacao.setBounds(10, 55, 109, 27);
+		txtValorTransacao.setBounds(10, 44, 109, 27);
 		panel.add(txtValorTransacao);
 		txtValorTransacao.setColumns(10);
 		
@@ -194,4 +234,15 @@ public class FormCorrente extends JFrame {
 		txtSaida = new JTextArea();
 		scrollPane.setViewportView(txtSaida);
 	}
+	
+	
+	private boolean validarValorTransacao(){
+		boolean rs = true;
+		if(txtValorTransacao.getText().equals("") || txtValorTransacao.getText()==null) {
+			rs = false;
+			JOptionPane.showMessageDialog(null, "O valor da transação deve ser preenchido");
+		}
+		return rs;
+	}
+	
 }
